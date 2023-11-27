@@ -1,0 +1,220 @@
+/*BEM Home*/
+
+.encabezado__estilo {
+    background-color: $color-negro;
+    border-bottom: solid 3px $color-oro;
+    position: sticky;
+    top: 0px;
+    z-index: 8;
+}
+
+.encabezado__barra {
+    align-items: flex-end;
+    margin-top: 40px;
+    justify-content: left;
+}
+
+.encabezado__efectoMenu {
+    &:hover {
+        background-color: $color-oro;
+    }
+}
+
+.principal__titulo {
+    display: flex;
+    align-self: center;
+    font: $fuente-titulo;
+    color: $color-oro;
+    text-shadow: $sombra-titulo;
+    max-width: 100%;
+    justify-self: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.principal__carrousel {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.principal__imagenGrande {
+    max-width: 100%;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.principal__subtitulos {
+	color: $color-negro;
+	text-align: center;
+	font-family: 'Marcellus', serif;
+    font-size: 7rem;
+    text-shadow: 2px 2px 8px $color-negro;
+}
+
+.principal__estiloTarjeta {
+    padding-top: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.principal__centrado{
+    display: flex;
+    justify-content: center;
+}
+
+.principal__textosLargos{
+    width: 80%;
+    margin: auto;
+}
+
+
+/*BEM Nosotros*/
+
+.principal__listaNosotros {
+    display: flex;
+	color: $color-negro;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font: $fuente-textos;
+    justify-content: center;
+}
+
+.principal__titulosConFondo {
+    color: $color-oro;
+    padding: 5px 5px 5px 5px;
+    font: $fuente-titulo;
+    font-size: 30px;
+    background-color: $color-negro;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    align-self: center;
+}
+
+.video-responsive{
+margin: 5px auto;
+height: 0px;
+width: 600px;
+height: 400px;
+max-width: 100%;
+max-height: 100%;
+position: relative;
+}
+
+
+.video-responsive iframe {
+    margin: auto;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    width: 100%;
+}
+
+
+/*BEM Servicios*/
+
+.principal__contenidoSobre {
+    padding: 15px 15px;
+    color: $color-blanco;
+}
+
+.principal__imgBanner {
+    max-width : 32rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal__textos {
+    font: $fuente-textos;
+    color: $color-negro;
+    text-align: left;
+}
+
+
+/*BEM Destinos*/
+
+.bariloche__claseHoteles {
+    @extend %destinoTarjetas;
+    grid-area: prestacion1;
+    display: flex;
+}
+
+.bariloche__claseTours {
+    @extend %destinoTarjetas;
+    grid-area: prestacion2;
+    display: flex;
+}
+
+.bariloche__claseComida {
+    @extend %destinoTarjetas;
+    grid-area: prestacion3;
+    display: flex;
+}
+
+.destino__logos{
+    width: 70%;
+    margin-left: 1.1rem;
+}
+
+.destino__subtitulosDestinos {
+	color: $color-oro;
+	text-align: center;
+    font-family: 'Marcellus', serif;
+    margin-top: 0.5rem;
+}
+
+.destinos__galeriaFotos {
+    grid-area: fotogal;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	margin-top: 2rem;
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.destinos__imagenesGalerias {
+	width: 20%;
+}
+
+.borde__formulario {
+    @include bordes (5px, 8px, inset);
+}
+
+.borde__galeria {
+    @include bordes (0px, 6px, groove);
+}
+
+.borde__fotoGaleria {
+    @include bordes (2px, 3px, solid);
+}
+
+
+/*BEM Contactos*/
+
+.contacto__alineacion{
+    display: flex;
+    justify-content: center;
+}
+
+.contacto__boton{
+    @extend %estiloBotones;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-oro;
+        border-color: $color-negro;
+    }
+}

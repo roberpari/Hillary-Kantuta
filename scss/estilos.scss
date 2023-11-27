@@ -1,0 +1,204 @@
+*{
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+}
+
+@import "variables";
+@import "operaciones";
+@import "grillas";
+@import "clases";
+
+
+/*SCSS*/
+
+/*Atributos Home*/
+
+header {
+    img {
+        @keyframes aparecer {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+header nav.navbar div.container-fluid button.bordeBoton {
+    border-color: $color-oro;
+}
+
+body header nav.navbar div.container-fluid li.nav-item a.colorMenu {
+    font: $fuente-textos;
+    color: $color-blanco;
+}
+
+main {
+    div {
+        h1 {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+    }
+}
+
+main section#paginaPrincipal div.card a.btn {
+    @extend %estiloBotones;
+        &:hover{
+            background-color: $color-oro;
+            border-color: $color-negro;
+        }
+}
+
+
+/*Atributos Nosotros*/
+
+main {
+    section {
+        div.principal__listaNosotros {
+            display: flex;
+                ul {
+                    list-style-image: url(../imagenes/nosotros/IconoDeluxeChico.png);
+                    list-style-position: inside;
+                    display: flex;
+                    justify-content: center;
+                    li {
+                        padding-right: 2rem;
+                    }
+                }
+        }
+    }
+}
+
+
+/*Atributos Servicios*/
+
+main section#grillaServicios div span:after,
+main section#grillaServicios div span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+}
+
+main section#grillaServicios div .circle-a:before {
+    width: 500px;
+    height: 500px;
+    top: -300px; left: 52%;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+main section#grillaServicios div .circle-a:after {
+    top: 160px;
+    right: 10%;
+}
+
+main section#grillaServicios div .circle-b:before {
+    top: 60%;
+    left: -25px;
+}
+
+main section#grillaServicios div .circle-b:after {
+    width: 150px;
+    height: 150px;
+    bottom: -70px;
+    right: -70px;
+}
+
+
+/*Animaciones*/
+
+#grad {
+	background-image: linear-gradient(to bottom, $color-oro , $color-oroClaro);
+}
+
+.imagen-escalar {
+	transition: .5s;
+}
+
+
+.imagen-escalar:hover {
+	transform: scale(1.4,1.4);
+}
+
+
+.rotacion {
+	transition-property: transform;
+	transition-duration: 2s;
+}
+
+.rotacion:hover {
+	animation-name: rotate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+	from {transform: rotateY(0dreg);}
+	to {transform: rotateY(360deg);}
+}
+
+
+
+/*Atributos del footer*/
+
+.footer-bs {
+    background-color: $color-negro;
+    padding: 1rem 40px;
+    margin-top: 2rem;
+	color: $color-oro;
+    border-top: solid 4px $color-oro;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:16px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; width: 90px;}
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; width: 90px;}
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+	font-size: 29px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:20px; color:rgba(255,255,255,0.70); }
+

@@ -1,0 +1,27 @@
+
+%destinoTarjetas{ 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 0.8rem;
+    padding-right: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.4rem;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+@mixin bordes ($radio, $ancho, $estilo) {
+    border-radius: $radio;
+    border-width: $ancho;
+    border-style: $estilo;
+    border-color: $color-oro;
+}
+
+%estiloBotones{
+    box-shadow: $sombra-cajas;
+    background-color: $color-negro;
+    border-color: $color-oroClaro;
+    color: $color-blanco;
+}
+
+
